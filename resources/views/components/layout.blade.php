@@ -6,11 +6,11 @@
 
         <title>Laravel</title>
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-
         <!-- Styles -->
+        <!-- Use vite to load the file from resourcer instead of the public directory, to up and run the vite server npm run dev -->
+        <!-- npm run build to generate the files for production -->
+        @vite(['resources/css/app.css', 'resources/js/app.js']);
+
         
     </head>
     <body class="bg-dark">
