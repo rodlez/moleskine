@@ -24,9 +24,10 @@
                     </form>
                 </div>
             </div>
-            @endforeach
-            
+            @endforeach            
         </div>
+        <!-- Add pagination -->
+        {{ $notes->links() }}
     </div>
 
 </x-layout>
