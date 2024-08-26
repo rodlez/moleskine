@@ -14,8 +14,14 @@
                 <div class="note-buttons">
                     <!-- To include the id -> Laravel resolve note passing the id key if we include the object, or we can pass it specifically -->
                     <a href="{{ route('note.show', $note) }}" class="note-edit-button">View</a>
-                    <a href="{{ route('note.edit', $note->id) }}" class="note-edit-button">Edit</a>
-                    <button class="note-delete-button">Delete</button>
+                    <a href="{{ route('note.edit', $note) }}" class="note-edit-button">Edit</a>
+                    <form action="{{ route('note.destroy', $note) }}" method="POST">
+                        <!-- Add Token to prevent Cross-Site Request Forgery (CSRF) -->
+                        @csrf
+                        <!-- Dirtective to Override the http method -->
+                        @method('DELETE')
+                        <button class="note-delete-button">Delete</button>
+                    </form>
                 </div>
             </div>
             @endforeach

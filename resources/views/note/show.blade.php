@@ -7,7 +7,13 @@
             <div class="note-buttons">
                 <a href="{{ route('note.index') }}" class="note-edit-button">Back</a>
                 <a href="{{ route('note.edit', $note->id) }}" class="note-edit-button">Edit</a>
-                <button class="note-delete-button">Delete</button>
+                <form action="{{ route('note.destroy', $note) }}" method="POST">
+                    <!-- Add Token to prevent Cross-Site Request Forgery (CSRF) -->
+                    @csrf
+                    <!-- Dirtective to Override the http method -->
+                    @method('DELETE')
+                    <button class="note-delete-button">Delete</button>
+                </form>
             </div>
         </div>
         <div class="note">
