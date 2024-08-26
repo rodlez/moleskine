@@ -2,7 +2,9 @@
 
 namespace Database\Seeders;
 
+// Models
 use App\Models\User;
+use App\Models\Note;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -16,8 +18,13 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();
 
         User::factory()->create([
+            'id' => 1,
             'name' => 'Test User',
             'email' => 'test@example.com',
+            'password' => bcrypt('123456')
         ]);
+
+        // Will create 100 entries for Note as has been define in the NoteFactory class
+        Note::factory(100)->create();
     }
 }
