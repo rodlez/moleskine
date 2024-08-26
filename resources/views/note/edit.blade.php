@@ -3,6 +3,10 @@
     <div class="note-container single-note">
         <h1>Edit note ID: {{ $note->id }}</h1>
         <form action="{{ route('note.update', $note->id) }}" method="POST" class="note">
+            <!-- Add Token to prevent Cross-Site Request Forgery (CSRF) -->
+            @csrf
+            <!-- Dirtective to Override the http method -->
+            @method('PUT')
             <textarea name="note" id="" cols="30" rows="10" class="note-body" placeholder="Enter note">{{ $note->note }}
             </textarea>
             <div class="note-buttons">
