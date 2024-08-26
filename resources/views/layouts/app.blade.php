@@ -27,9 +27,18 @@
                 </header>
             @endisset
 
-            <!-- Page Content -->
+            <!-- Page Content -->           
             <main>
+            
+            <!-- Session to pass the message for the CRUD operations -->
+            @session('message')
+            <div class="success-message">
+                {{ session('message') }}
+            </div>
+            @endsession
+            <!-- To output variables in blade, use slot --> 
                 {{ $slot }}
+            
             </main>
         </div>
     </body>

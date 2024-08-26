@@ -17,14 +17,15 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
+
         User::factory()->create([
-            'id' => 1,
-            'name' => 'Test User',
+            'id' => 3,
+            'name' => 'Rodolfo',
             'email' => 'test@example.com',
-            'password' => bcrypt('123456')
+            'password' => bcrypt('12345678')
         ]);
 
         // Will create 100 entries for Note as has been define in the NoteFactory class
-        Note::factory(100)->create();
+        Note::factory(150)->create();
     }
 }

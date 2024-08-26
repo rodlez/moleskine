@@ -127,6 +127,37 @@
     justify-content: space-between;
   }
   
+  .note-buttons .note-back-button {
+    padding: 6px 10px;
+    border-radius: 4px;
+    color: white;
+    background-color: #000;
+    border: 1px solid #424247;
+    transition: all 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+  .note-buttons .note-back-button:hover {
+    background-color: #424247;
+  }
+
+  .note-buttons .note-view-button {
+    padding: 6px 10px;
+    border-radius: 4px;
+    color: white;
+    background-color: #0cc915;
+    border: 1px solid #098a10;
+    transition: all 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+  .note-buttons .note-view-button:hover {
+    background-color: #098a10;
+  }
   
   .note-buttons .note-edit-button {
     padding: 6px 10px;
