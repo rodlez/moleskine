@@ -1,5 +1,5 @@
 <!-- To use the layout.blade.php in views/components as a Template to render in the slot variable -->
-<x-layout>
+<x-app-layout>
     <div class="note-container single-note">
         
         <div class="note-header">
@@ -20,4 +20,4 @@
             <div class="note-body">{{ $note->note }}</div>
         </div>
     </div>
-</x-layout>
+</x-app-layout>

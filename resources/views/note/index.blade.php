@@ -1,5 +1,5 @@
 <!-- To use the layout.blade.php in views/components as a Template to render in the slot variable -->
-<x-layout>
+<x-app-layout>
     <!-- Notes -->    
     <div class="note-container">
         <!-- 2 ways to generate the routes, hardcoded or use the name defined in the routes -->
@@ -30,4 +30,4 @@
         {{ $notes->links() }}
     </div>
 
-</x-layout>
+</x-app-layout>

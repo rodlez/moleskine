@@ -1,5 +1,5 @@
 <!-- To use the layout.blade.php in views/components as a Template to render in the slot variable -->
-<x-layout>
+<x-app-layout>
     <div class="note-container single-note">
         <h1>Edit note ID: {{ $note->id }}</h1>
         <form action="{{ route('note.update', $note->id) }}" method="POST" class="note">
@@ -15,4 +15,4 @@
             </div>        
         </form>        
     </div>
-</x-layout>
+</x-app-layout>
