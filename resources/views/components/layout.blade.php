@@ -9,11 +9,11 @@
         <!-- Styles -->
         <!-- Use vite to load the file from resourcer instead of the public directory, to up and run the vite server npm run dev -->
         <!-- npm run build to generate the files for production -->
-        @vite(['resources/css/app.css', 'resources/js/app.js']);
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
 
         
     </head>
-    <body class="bg-dark">
+    <body>
     <!-- To output variables in blade, use slot -->    
     {{ $slot }}
     </body>
