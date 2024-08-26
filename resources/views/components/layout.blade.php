@@ -14,7 +14,13 @@
         
     </head>
     <body>
-    <!-- To output variables in blade, use slot -->    
+    <!-- Session to pass the message for the CRUD operations -->
+    @session('message')
+        <div class="success-message">
+            {{ session('message') }}
+        </div>
+    @endsession
+        <!-- To output variables in blade, use slot -->    
     {{ $slot }}
     </body>
 </html>
